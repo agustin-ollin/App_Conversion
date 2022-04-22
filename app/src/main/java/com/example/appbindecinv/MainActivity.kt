@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat
  */
 class MainActivity : AppCompatActivity() {
     // Variables que referencian a los elementos de la interfaz
-    //lateinit var listaOpciones: Spinner
+    lateinit var btnReturn: Button
     lateinit var button: Button
     lateinit var labelTitulo: TextView
 
@@ -34,6 +34,26 @@ class MainActivity : AppCompatActivity() {
 
         changeTitleAndBackground(titulo, opcion)
         eventButton(opcion, titulo)
+        evenReturn()
+    }
+
+    /**
+     * Función para declarar evento en el botón para regresar a la pantalla principal
+     */
+    fun evenReturn(){
+        btnReturn = findViewById(R.id.btnReturn)
+        btnReturn.setOnClickListener {
+            onBackPressed()
+            overridePendingTransition(R.anim.left_in, R.anim.left_out)
+        }
+    }
+
+    /**
+     * Función para agregar animación cuando se presione el botón back del telefono
+     */
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.left_in, R.anim.left_out)
     }
 
     /**
@@ -72,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             var editTNum: EditText = findViewById(R.id.numTransf)
             var numero = editTNum.text.toString()
-            if(comprobarValores(opcion, numero)){
+            if(comprobarValores(opcion, numero) && numero != "" && !numero.isEmpty()){
 
                 realizarOperacion(numero, opcion, operation)
             } else {

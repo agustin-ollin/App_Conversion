@@ -60,6 +60,7 @@ class MainActivitySeleccion : AppCompatActivity() {
         intent.putExtra("base", opcion)
         intent.putExtra("titulo", base)
         startActivity(intent)
+        overridePendingTransition(R.anim.left_in, R.anim.left_out)
     }
 
     /**
