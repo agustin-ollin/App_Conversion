@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Convert</string>
+
+    <!-- Etiquetas Activity_Main -->
+    <string name="etq_Decimal">Decimal:</string>
+    <string name="etq_Binario">Binario:</string>
+    <string name="etqConvertir">Convertir a:</string>
+    <string name="etqNumber">Número:</string>
+
+    <string name="btnConvertir">Convertir</string>
+    <string name="etqResult">Resultado:</string>
+    <string name="result">Esperando...</string>
+
+    <string name="hintNumero">Ingrese un número</string>
+
+    <!-- Etiquetas de botones de selección -->
+    <string name="strDecimal">Decimal</string>
+    <string name="strBinario">Binario</string>
+    <string name="strOctal">Octal</string>
+    <string name="strHexadecimal">Hexadecimal</string>
+    <string name="strTitulo">¿Qué número desea convertir?</string>
+
+    <!-- Descripciones de Imagenes -->
+    <string name="imgDecimal">Imagen de sistema Decimal</string>
+    <string name="imgBinario">Imagen de sistema Binario</string>
+    <string name="imgOctal">Imagen de sistema Octal</string>
+    <string name="imgHexadecimal">Imagen de sistema Hexadecimal</string>
+
+    <!-- Etiquetas de tabla -->
+    <string name="tituloTabla">Resultados</string>
+    <string name="colUnidad">Unidad de Medida</string>
+    <string name="colResultados">Resultados</string>
+    <string name="colVacia">          </string>
+
+    <!-- Digitos Permitidos Para EditText -->
+    <string name="digBinario">10</string>
+    <string name="digDecimal">1234567890</string>
+    <string name="digHexadecimal">ABCDEF1234567890</string>
+    <string name="digAll">1234567890ABCDEF</string>
+</resources>
