@@ -11,10 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/table_background"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="20dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textTitulo"
@@ -71,6 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="20dp"
             android:text="@string/btnConvertir"
             android:textColor="@color/white"
             android:textSize="28sp"
@@ -79,40 +86,26 @@
             app:strokeColor="@color/teal_700"
             app:strokeWidth="3dp" />
 
+        <TextView
+            android:id="@+id/tituloTabla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/teal_700"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/tituloTabla"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
         <TableLayout
             android:id="@+id/tablaDeResultados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="15dp"
             android:padding="5dp">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/content_background"
-                android:backgroundTint="@color/teal_700"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/tituloTabla"
-                    android:layout_width="163dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:paddingStart="5dp"
-                    android:paddingEnd="5dp"
-                    android:text="@string/tituloTabla"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-            </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
@@ -122,7 +115,7 @@
 
                 <TextView
                     android:id="@+id/etqColum1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="174dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/content_background"
                     android:backgroundTint="@color/teal_700"
@@ -136,7 +129,7 @@
 
                 <TextView
                     android:id="@+id/etqColumn2"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:background="@drawable/content_background"
@@ -167,7 +160,9 @@
                     android:paddingEnd="5dp"
                     android:text="@string/strDecimal"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/resDecimal"
@@ -177,7 +172,9 @@
                     android:background="@drawable/content_background"
                     android:text="@string/colVacia"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
@@ -195,7 +192,9 @@
                     android:paddingEnd="5dp"
                     android:text="@string/strBinario"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/resBinario"
@@ -205,7 +204,9 @@
                     android:background="@drawable/content_background"
                     android:text="@string/colVacia"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
@@ -223,7 +224,9 @@
                     android:paddingEnd="5dp"
                     android:text="@string/strOctal"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/resOctal"
@@ -233,7 +236,9 @@
                     android:background="@drawable/content_background"
                     android:text="@string/colVacia"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
@@ -251,7 +256,9 @@
                     android:paddingEnd="5dp"
                     android:text="@string/strHexadecimal"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/resHexadecimal"
@@ -261,7 +268,9 @@
                     android:background="@drawable/content_background"
                     android:text="@string/colVacia"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </TableRow>
         </TableLayout>
 
@@ -271,6 +280,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:text="@string/btmRegresar"
             android:textColor="@color/white"
             android:textSize="28sp"
